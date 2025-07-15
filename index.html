@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세부특기사항 변환기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>학생 활동기록 → 과목별 세부특기사항 변환</h1>
+        <form id="activityForm">
+            <label for="subject">과목 선택:</label>
+            <select id="subject" name="subject" required>
+                <option value="">과목을 선택하세요</option>
+                <option value="정보">정보</option>
+                <option value="수학">수학</option>
+                <option value="과학">과학</option>
+                <option value="영어">영어</option>
+            </select>
+            <label for="activity">활동기록 입력:</label>
+            <textarea id="activity" name="activity" rows="5" required placeholder="학생의 활동 내용을 입력하세요"></textarea>
+            <button type="submit">세부특기사항 변환</button>
+        </form>
+        <div id="result">
+            <!-- 변환 결과가 여기에 표시됩니다 -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
