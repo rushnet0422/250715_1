@@ -2,12 +2,15 @@ import os
 import requests
 from flask import Flask, request, jsonify
 from dotenv import load_dotenv
+from flask_cors import CORS
 
 load_dotenv()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent"
 
+
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/gemini-convert', methods=['POST'])
 def gemini_convert():
